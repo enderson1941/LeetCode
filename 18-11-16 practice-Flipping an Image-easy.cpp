@@ -30,11 +30,12 @@ public:
   		{
   			(*it)[sz_ / 2] = !((*it)[sz_ / 2]);
   		}
+      sz_--;
   		for (int i = 0; i < sz_ / 2; i++)
   		{
   			(*it)[i] = !(*it)[i];
-  			(*it)[sz_ - 1 - i] = !(*it)[sz_ - 1 - i];
-  			swap((*it)[i], (*it)[sz_ - 1 - i]);
+  			(*it)[sz_ - i] = !(*it)[sz_ - i];
+  			swap((*it)[i], (*it)[sz_ - i]);
   		}
   		it++;
   	}
