@@ -22,35 +22,35 @@ S only contains characters "I" or "D".
 class Solution
 {
 public:
-    vector<int> diStringMatch(string S)
-    {
-      int inc = 0;
-    	int dec = S.size();
-    	int sum = 0;
-    	vector<int> series;
-    	string::iterator it = S.begin();
-    	for (int j = 1; j < dec + 1; j++)
-    	{
-    		sum += j;
-    	}
-    	while (it != S.end())
-    	{
-    		if (*it == 'I')//increase
-    		{
-    			series.push_back(inc);
-    			sum -= inc;
-    			inc++;
-    		}
-    		else//decrease
-    		{
-    			series.push_back(dec);
-    			sum -= dec;
-    			dec--;
-    		}
-    		it++;
-    	}
-    	series.push_back(sum);
-      return series;
-      //runtime: 36ms
-    }
+  vector<int> diStringMatch(string S)
+  {
+    int inc = 0;
+  	int dec = S.size();
+  	int sum = 0;
+  	vector<int> series;
+  	string::iterator it = S.begin();
+  	for (int j = 1; j < dec + 1; j++)
+  	{
+  		sum += j;
+  	}
+  	while (it != S.end())
+  	{
+  		if (*it == 'I')//increase
+  		{
+  			series.push_back(inc);
+  			sum -= inc;
+  			inc++;
+  		}
+  		else//decrease
+  		{
+  			series.push_back(dec);
+  			sum -= dec;
+  			dec--;
+  		}
+  		it++;
+  	}
+  	series.push_back(sum);
+    return series;
+    //runtime: 36ms
+  }
 };
