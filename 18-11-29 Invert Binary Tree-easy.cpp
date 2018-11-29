@@ -36,11 +36,17 @@ public:
   {
     if(root == NULL)
       return root;
+/// cout<<"L"<<root->val<<" ";
     root->left = invertTree(root->left);
+/// cout<<"R"<<root->val<<" ";
     root->right = invertTree(root->right);
-    TreeNode* temp = root->left;
-    root->left = root->right;
-    root->right = temp;
+    if(root->left != NULL && root->right != NULL)
+    {
+///   cout<<"change"<<root->val<<endl;
+      TreeNode* temp = root->left;
+      root->left = root->right;
+      root->right = temp;
+    }
     return root;
     //runtime: 0ms
   }
