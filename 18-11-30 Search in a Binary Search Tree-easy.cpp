@@ -35,9 +35,9 @@ public:
       while (pNode && val != pNode->val)
       {
         if (val < pNode->val)
-            pNode = pNode->left;
+          pNode = pNode->left;
         else
-            pNode = pNode->right;
+          pNode = pNode->right;
       }
       return pNode;
       //runtime: 24ms
