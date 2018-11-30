@@ -34,10 +34,10 @@ public:
       TreeNode *pNode = root;
       while (pNode && val != pNode->val)
       {
-          if (val < pNode->val)
-              pNode = pNode->left;
-          else
-              pNode = pNode->right;
+        if (val < pNode->val)
+            pNode = pNode->left;
+        else
+            pNode = pNode->right;
       }
       return pNode;
       //runtime: 24ms
