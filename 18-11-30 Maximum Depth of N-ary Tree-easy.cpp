@@ -7,7 +7,7 @@ For example, given a 3-ary tree:
               /  |  \
             3   2   4
           /  \
-        5     6
+        5    6
 
 We should return its max depth, which is 3.
 
