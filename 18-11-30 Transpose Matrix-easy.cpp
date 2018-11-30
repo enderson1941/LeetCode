@@ -27,7 +27,7 @@ public:
       vector<int> temp;
       for(int m = 0; m < A.size(); m++)
       {
-          temp.push_back(A[m][n]);
+        temp.push_back(A[m][n]);
       }
       res.push_back(temp);
     }
