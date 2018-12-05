@@ -28,7 +28,7 @@ The height and width of the given matrix is in range [1, 100].
 The given r and c are all positive.
 */
 
-class Solution
+class Solution //stack
 {
 public:
   vector<vector<int>> matrixReshape(vector<vector<int>>& nums,
@@ -65,5 +65,36 @@ public:
   	answer.push_back(temp_);
     return answer;
     //runtime: 32ms
+  }
+};
+
+class Solution //direct
+{
+public:
+  vector<vector<int>> matrixReshape(vector<vector<int>>& nums,
+    int r, int c)
+  {
+  	int row = 0;
+  	int col = 0;
+  	vector<vector<int>> answer(r, vector<int>(c));
+  	if (r*c != nums.size()*nums[0].size())
+  	{
+  		return nums;
+  	}
+  	for (int i = 0; i < nums.size(); i++)
+  	{
+  		for (int j = 0; j < nums[0].size(); j++)
+  		{
+  			if (col == c)
+  			{
+  				row++;
+  				col = 0;
+  			}
+  			answer[row][col] = nums[i][j];
+  			col++;
+  		}
+  	}
+    return answer;
+    //runtime: 24ms
   }
 };
