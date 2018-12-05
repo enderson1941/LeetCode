@@ -38,7 +38,7 @@ public:
   	int row = nums.size();
   	int col = nums[0].size();
   	vector<int> temp_;
-  	vector<vector<int>> answer;
+  	vector<vector<int>> answer(r, vector<int>(c));
   	if (r*c != row*col)
   	{
   		return nums;
@@ -64,6 +64,6 @@ public:
   	}
   	answer.push_back(temp_);
     return answer;
-    //runtime: 40ms
+    //runtime: 32ms
   }
 };
