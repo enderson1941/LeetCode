@@ -28,18 +28,18 @@ public:
     vector<int>& nums)
   {
     vector<int> res;
-    for(int i=0;i<findNums.size();i++)
+    for(int i = 0; i < findNums.size(); i++)
     {
       vector<int>::iterator it = find(nums.begin(),
       nums.end(), findNums[i]);
       while(it !=nums.end())
       {
-          if(*it > findNums[i])
-          {
-              res.push_back(*it);
-              break;
-          }
-          it++;
+        if(*it > findNums[i])
+        {
+          res.push_back(*it);
+          break;
+        }
+        it++;
       }
       if(it == nums.end())
         res.push_back(-1);
