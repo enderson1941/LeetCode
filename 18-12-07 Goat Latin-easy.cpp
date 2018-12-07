@@ -26,24 +26,19 @@ public:
   string toGoatLatin(string S)
   {
     string vowel = "a e i o u A E I O U";
-  	string res;
-  	string temp = "";
-  	int index = 1;
+  	string res= "", temp = "", as ="";
     S += " ";
   	while (S.size())
   	{
-  		if (S[0] == ' ')
+      if (S[0] == ' ')
   		{
-  			if (find(vowel.begin(), vowel.end(), temp[0]) == vowel.end())
+        as += "a";
+        if (find(vowel.begin(), vowel.end(), temp[0]) == vowel.end())
   			{
   				temp.insert(temp.end(), temp[0]);
   				temp.erase(temp.begin(), temp.begin() + 1);
   			}
-  			temp += "ma";
-  			for (int i = 0; i < index; i++)
-  			   temp += "a";
-  			index++;
-  			res += temp + " ";
+  			res += temp + "ma" + as + " ";;
   			temp = "";
   		}
   		else
