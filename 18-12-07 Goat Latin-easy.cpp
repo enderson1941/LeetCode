@@ -38,7 +38,7 @@ public:
   				temp.insert(temp.end(), temp[0]);
   				temp.erase(temp.begin(), temp.begin() + 1);
   			}
-  			res += temp + "ma" + as + " ";;
+  			res += temp + "ma" + as + " ";
   			temp = "";
   		}
   		else
