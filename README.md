@@ -22,5 +22,5 @@ Sum: easy: 50
 ```
 Date: 2018/12/11
 
-Sum: easy: 57
+Sum: easy: 60
 ```
