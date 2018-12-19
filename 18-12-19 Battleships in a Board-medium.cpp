@@ -27,7 +27,7 @@ public:
   		{
   			if (board[i][j] == 'X')
   			{
-  				if ((j > 0 && board[i][j-1]=='X') ||
+  				if ((j > 0 && board[i][j-1] == 'X') ||
           (i > 0 && board[i-1][j] == 'X'))
   				{
   				  continue;
