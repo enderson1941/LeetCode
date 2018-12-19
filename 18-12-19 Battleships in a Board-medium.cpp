@@ -32,10 +32,7 @@ public:
   				{
   				  continue;
   				}
-          else
-          {
-            ans++;
-          }
+          ans++;
   			}
   		}
   	}
