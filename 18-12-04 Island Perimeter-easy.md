@@ -14,6 +14,8 @@ Input:
 Output: 16
 ```
 Explanation: The perimeter is the 16 yellow stripes in the image below:
-<div align = center>
+
 ![pic1](island.png)
-</div>
+
+
+
